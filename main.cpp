@@ -11,3 +11,12 @@ int main()
     inv.removeItem(1);
     inv.displayInventory();
 }
+
+/*
+Item - сделать абстрактным
+use () = 0;
+
+class WeaponItem : Item
+class FoodItem : Item
+
+*/

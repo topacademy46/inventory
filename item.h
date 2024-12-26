@@ -16,4 +16,6 @@ public:
     void setAmount(int value);
     int getAmount();
     void displayInfo();
+
+    virtual void use() = 0;
 };
