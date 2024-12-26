@@ -4,15 +4,16 @@
 class Cell
 {
 private:
-    Item item;
+    Item *item;
 
 public:
-    Cell(Item item) : item(item) {}
-    Cell() : Cell(Item()) {}
+    Cell(Item *item) : item(item) {}
+    Cell() : Cell(nullptr) {}
 
-    void addItem(Item item);
+    void addItem(Item &item);
     void removeItem();
     void displayCell();
-
     bool isEmpty();
+
+    void useItem();
 };

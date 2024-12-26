@@ -9,4 +9,10 @@ private:
     float damage;
 
     Inventory inv;
+
+public:
+    Character(float health, float damage) : health(health), damage(damage) {}
+
+    Inventory getInventory();
+    void useItem(int index);
 };

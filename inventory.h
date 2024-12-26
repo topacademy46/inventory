@@ -20,7 +20,9 @@ public:
     }
     Inventory() : Inventory(6) {}
 
-    void addItem(Item item);
+    void addItem(Item &item);
     void removeItem(int index);
     void displayInventory();
+    bool cellIsEmpty(int index);
+    void useItem(int index);
 };

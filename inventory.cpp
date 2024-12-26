@@ -1,6 +1,6 @@
 #include "inventory.h"
 
-void Inventory::addItem(Item item)
+void Inventory::addItem(Item &item)
 {
     bool cellFound = false;
     for (int i = 0; i < inventory.size(); i++)
@@ -32,3 +32,13 @@ void Inventory::removeItem(int index)
 {
     inventory[index].removeItem();
 }
+
+bool Inventory::cellIsEmpty(int index)
+{
+    return inventory[index].isEmpty();
+}
+
+void Inventory::useItem(int index)
+{
+    inventory[index].useItem();
+};

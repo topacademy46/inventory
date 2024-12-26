@@ -1,15 +1,12 @@
-#include "item.h"
-#include "inventory.h"
+#include "character.h"
+#include "weaponItem.h"
 
 int main()
 {
-    Inventory inv;
-    inv.displayInventory();
-    inv.addItem(Item("Apple", "Just an apple", 1));
-    inv.addItem(Item("Rusty Sword", "...", 1));
-    inv.displayInventory();
-    inv.removeItem(1);
-    inv.displayInventory();
+    Character hero = Character(100, 0);
+
+    hero.getInventory().addItem(WeaponItem("Sword", "...", 1, 5));
+    hero.useItem(0);
 }
 
 /*
