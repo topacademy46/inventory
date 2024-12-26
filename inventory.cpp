@@ -1,6 +1,6 @@
 #include "inventory.h"
 
-void Inventory::addItem(Item &item)
+void Inventory::addItem(Item* item)
 {
     bool cellFound = false;
     for (int i = 0; i < inventory.size(); i++)

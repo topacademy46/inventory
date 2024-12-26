@@ -9,7 +9,7 @@ class Inventory
 private:
     std::vector<Cell> inventory;
     int size;
-
+    //Character* owner;
 public:
     Inventory(int size)
     {
@@ -17,10 +17,11 @@ public:
         {
             inventory.push_back(Cell());
         }
+        this->size = size;
     }
     Inventory() : Inventory(6) {}
 
-    void addItem(Item &item);
+    void addItem(Item* item);
     void removeItem(int index);
     void displayInventory();
     bool cellIsEmpty(int index);

@@ -1,8 +1,8 @@
 #include "cell.h"
 
-void Cell::addItem(Item &item)
+void Cell::addItem(Item* item)
 {
-    *this->item = item;
+    this->item = item;
 }
 void Cell::removeItem()
 {
@@ -18,7 +18,7 @@ void Cell::displayCell()
 
 bool Cell::isEmpty()
 {
-    if (item->getAmount() > 0)
+    if (item != nullptr && item->getAmount() > 0)
     {
         return false;
     }

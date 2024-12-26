@@ -5,15 +5,8 @@ int main()
 {
     Character hero = Character(100, 0);
 
-    hero.getInventory().addItem(WeaponItem("Sword", "...", 1, 5));
+    WeaponItem* item1 = new WeaponItem("Sword", "...", 1, 5);
+    hero.getInventory().addItem(item1);
+    hero.getInventory().displayInventory();
     hero.useItem(0);
 }
-
-/*
-Item - сделать абстрактным
-use () = 0;
-
-class WeaponItem : Item
-class FoodItem : Item
-
-*/
